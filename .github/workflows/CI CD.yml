@@ -1,4 +1,4 @@
-name: CI CD
+(Line: 3, Col: 4): Unexpected value '', (Line: 4, Col: 1): Unexpected value 'workflow_dispatch', (Line: 22, Col: 1): Unexpected value 'test', (Line: 28, Col: 1): Unexpected value 'deploy'
 
 on:
 workflow_dispatch:
