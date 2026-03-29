@@ -1,26 +1,32 @@
----
 name: CI CD
-on: null
-workflow_dispatch: null
+
+on:
+  workflow_dispatch:
 
 jobs:
   code:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        run: echo "code clone form github"
+        run: echo "code clone from github"
+
   build:
     runs-on: ubuntu-latest
+    needs: code
     steps:
       - name: build docker container
         run: echo "build docker container"
+
   test:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: test code
         run: echo "testing code"
+
   deploy:
     runs-on: ubuntu-latest
-  steps:
-    - name: deploy code
-      run: echo "deploying code"
+    needs: test
+    steps:
+      - name: deploy code
+        run: echo "deploying code"
