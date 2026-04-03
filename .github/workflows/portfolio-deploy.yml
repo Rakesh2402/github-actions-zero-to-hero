@@ -25,7 +25,7 @@ jobs:
 
          # setups github pages
         - name : seup github pages
-          uses: action/configure-pages@v4
+          uses: actions/configure-pages@v4
 
 
          #static code artifacts
@@ -36,5 +36,5 @@ jobs:
         
         
         - name: deploy to gihub pages
-          uses: action/deploy-pages@v4 
+          uses: actions/deploy-pages@v4 
        
