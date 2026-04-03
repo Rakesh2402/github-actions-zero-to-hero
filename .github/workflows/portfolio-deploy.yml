@@ -1,0 +1,40 @@
+name: portfolio
+
+on: 
+  push:
+    branches: [main]
+
+permissions:
+    pages: write
+    id-token: write
+
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+
+        env:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+
+        steps:
+         # clones or checkout code where this workflow is written
+        - name: checkout code
+          uses: actions/checkout@v4
+
+         # setups github pages
+        - name : seup github pages
+          uses: action/configure-pages@v4
+
+
+         #static code artifacts
+        - name: upload static files
+          uses: actions/checkout@v4
+          with:
+            path: "."
+        
+        
+        - name: deploy to gihub pages
+          uses: action/deploy-pages@v4 
+       
