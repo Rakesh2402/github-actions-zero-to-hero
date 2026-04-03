@@ -16,7 +16,7 @@ jobs:
 
         env:
             name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
+            # (url: ${{ steps.deployment.outputs.page_url }})
 
         steps:
          # clones or checkout code where this workflow is written
