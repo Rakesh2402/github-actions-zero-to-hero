@@ -21,5 +21,4 @@ jobs:
               run: pip install -r requirments.txt
 
             - name: run linter
-              run: flake8 app.yml
-              
+              run: flake8 app.py
