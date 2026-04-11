@@ -1,10 +1,10 @@
 name: deploy flask app
 
-on :
-    workflow_dispatch
+on:
+    workflow_dispatch:
 
 jobs:
-    delpoy:
+    deploy:
         env:
             DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
             
