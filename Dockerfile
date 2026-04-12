@@ -8,6 +8,6 @@ RUN pip install -r requirments.txt
 
 EXPOSE 80
 
-# CMD ["python", "app.py"]
+CMD ["python", "app.py"]
 
-CMD ["gunicorn","--bind", "0.0.0.0:80", "app:app"]
+#CMD ["gunicorn","--bind", "0.0.0.0:80", "app:app"]
